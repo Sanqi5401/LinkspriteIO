@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/msc_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeToolbar"
+        app:theme="@style/ThemeToolbar" />
+
+    <LinearLayout
+        android:id="@+id/signup_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/settings_top_margin"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/settings_side_padding"
+        android:paddingRight="@dimen/settings_side_padding">
+
+        <View
+            android:id="@+id/first_name_hr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/medium_grey" />
+
+        <EditText
+            android:id="@+id/email"
+            style="@style/settingsEditText"
+            android:hint="@string/email_hint"
+            android:inputType="textCapWords" />
+
+
+        <View
+            android:id="@+id/last_name_hr"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/medium_grey" />
+
+        <EditText
+            android:id="@+id/password"
+            style="@style/settingsEditText"
+            android:hint="@string/password_hint"
+            android:inputType="textCapWords" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/medium_grey" />
+
+        <EditText
+            android:id="@+id/confirmPassword"
+            style="@style/settingsEditText"
+            android:hint="@string/confirm_password_hint"
+            android:inputType="textPassword" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/medium_grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="28dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/next_button"
+                style="@style/button_card"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="28dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/button_tv"
+                        android:text="@string/next" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/back_to_login_button"
+                style="@style/button_card"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="28dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/button_tv"
+                        android:text="@string/back_to_login" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

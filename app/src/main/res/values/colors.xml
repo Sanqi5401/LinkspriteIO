@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_grey">#d4c9bf</color>
+    <color name="medium_grey">#8a7967</color>
+    <color name="medium_grey_half_transparent">#888a7967</color>
+    <color name="msc_primary">#009B9F</color>
+    <color name="msc_primary_dark">#007577</color>
+    <color name="msc_accent">#F2B11C</color>
+    <color name="msc_accent_light">#FEC74A</color>
+    <color name="tem_color">#fad582</color>
+    <color name="hum_color">#77e5f9</color>
+    <color name="press_color">#dbdcdc</color>
+    <color name="tab">#ded7d7</color>
+
+
+    <color name="drawer_item_text_color">#FFFFFF</color>
+    <color name="drawer_item_Icon_tint">#FFFFFF</color>
+
+    <color name="card">#c9f7b0</color>
+    <color name="card_setting_type">#cfd0d1</color>
+
+    <color name="leftPointer">#03ff2d</color>
+    <color name="rightPointer">#ff020a</color>
+
+    <color name="color_start">#40ff00</color>
+    <color name="color_middle">#33ff0000</color>
+    <color name="color_end">#40ff00</color>
+
+</resources>

@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/summer_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:src="@mipmap/linkspriteio" />
+
+
+    <LinearLayout
+        android:id="@+id/loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_fields_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/medium_grey" />
+
+
+        <EditText
+            android:id="@+id/login_email_field"
+            style="@style/login_edit_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFFFF"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@color/medium_grey" />
+
+
+        <EditText
+            android:id="@+id/login_password_field"
+            style="@style/login_edit_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFFFF"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:background="@color/medium_grey" />
+
+        <RelativeLayout
+            android:id="@+id/remember_me_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFFFF">
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/remember_me_switch"
+                style="@style/toggle_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:switchMinWidth="50dp"
+                android:text="@string/remember_me"
+                android:textOff="\u0020"
+                android:textOn="\u0020"
+                android:textSize="14dp"
+                app:theme="@style/MscSwitchStyle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#FFFFFFFF">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/sign_in_button"
+                style="@style/button_card"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/button_tv"
+                        android:text="@string/login" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/create_account"
+                style="@style/button_card"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/button_tv"
+                        android:text="@string/create_account" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="123" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/main_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/msc_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeToolbar"
+            app:theme="@style/ThemeToolbar" />
+
+        <LinearLayout
+            android:id="@+id/signup_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/settings_top_margin"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/settings_side_padding"
+            android:paddingRight="@dimen/settings_side_padding">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/new_settings_row_height"
+                    android:layout_marginLeft="@dimen/settings_text_left_margin"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/dev_name"
+                    android:textSize="@dimen/new_settings_text_size" />
+
+                <EditText
+                    android:id="@+id/edit_device_name"
+                    style="@style/settingsEditText"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/new_settings_row_height"
+                    android:layout_marginLeft="@dimen/settings_text_left_margin"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/dev_type"
+                    android:textSize="@dimen/new_settings_text_size" />
+
+                <TextView
+                    android:id="@+id/device_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/new_settings_row_height"
+                    android:layout_marginLeft="@dimen/settings_text_left_margin"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="123"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/new_settings_row_height"
+                    android:layout_marginLeft="@dimen/settings_text_left_margin"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:text="@string/group_name"
+                    android:textSize="@dimen/new_settings_text_size" />
+
+                <EditText
+                    android:id="@+id/edit_group_name"
+                    style="@style/settingsEditText"
+                    android:background="@drawable/edit_text_background"
+                    android:padding="10dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cancel_button"
+                style="@style/button_card"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/button_tv"
+                        android:text="@string/cancel"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/confirm_button"
+                style="@style/button_card"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        style="@style/button_tv"
+                        android:text="@string/confirm"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/main_parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/msc_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeToolbar"
+            app:theme="@style/ThemeToolbar"/>
+
+        <LinearLayout
+            android:id="@+id/settings_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/settings_top_margin"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/settings_side_padding"
+            android:paddingRight="@dimen/settings_side_padding">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/medium_grey"/>
+
+            <EditText
+                android:id="@+id/oldPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/top_bottom_bordered_edit_field"
+                android:hint="@string/old_password_hint"
+                android:inputType="textPassword"
+                android:background="#FFFFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/medium_grey"/>
+
+            <EditText
+                android:id="@+id/newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/top_bottom_bordered_edit_field"
+                android:hint="@string/new_password_hint"
+                android:inputType="textPassword"
+                android:background="#FFFFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/medium_grey"/>
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/top_bottom_bordered_edit_field"
+                android:hint="@string/confirm_new_password_hint"
+                android:inputType="textPassword"
+                android:background="#FFFFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/medium_grey"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/update_password_button"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="28dp"
+                style="@style/button_card">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:text="@string/submit"
+                        style="@style/button_tv"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        android:background="?attr/colorPrimary"
+        app:itemIconTint="@color/drawer_item_Icon_tint"
+        app:itemTextColor="@color/drawer_item_text_color"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

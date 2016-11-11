@@ -1,0 +1,222 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--<item name="switchStyle">@style/switch_light</item>-->
+        <!--<item name="textAppearance">@style/TextAppearance</item>-->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorPrimary">@color/msc_primary</item>
+        <item name="colorPrimaryDark">@color/msc_primary_dark</item>
+        <item name="colorAccent">@color/medium_grey</item>
+    </style>
+
+    <style name="ThemeToolbar" parent="AppTheme">
+        <!-- android:textColorPrimary is the  color of the title text
+               in the Toolbar, in the Theme.AppCompat theme:  -->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <!-- android:textColorPrimaryInverse is the  color of the title
+               text in the Toolbar, in the Theme.AppCompat.Light theme:  -->
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+
+        <!-- android:actionMenuTextColor is the color of the text of
+                action (menu) items in the Toolbar, at least in the
+                Theme.AppCompat theme.
+                For some reason, they already get the textColorPrimary
+                when running on API 21, but not on older versions of
+                Android, so this is only necessary to support older
+                Android versions.-->
+        <item name="actionMenuTextColor">@color/white</item>
+        <!-- android:textColorSecondary is the color of the menu
+               overflow icon (three vertical dots) -->
+        <item name="android:textColorSecondary">@color/white</item>
+
+        <!-- This would set the toolbar's background color,
+                but setting this also changes the popup menu's background,
+                even if we define popupTheme for our <Toolbar> -->
+        <item name="android:background">?attr/colorPrimary</item>
+
+        <item name="android:colorBackground">?attr/colorPrimary</item>
+    </style>
+
+
+    <style name="login_edit_field">
+        <item name="android:background">@drawable/edit_text_transparent_background</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingRight">48dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingLeft">48dp</item>
+        <item name="android:textColor">@color/medium_grey</item>
+        <item name="android:textColorHint">@color/medium_grey</item>
+        <item name="android:textSize">20dp</item>
+        </style>
+
+    <style name="toggle_switch">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColor">@color/medium_grey</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+    <style name="MscSwitchStyle">
+        <item name="colorControlActivated">@color/msc_primary</item>
+    </style>
+    <style name="button_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button_card" parent="CardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardBackgroundColor">@color/msc_accent</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">1dp</item>
+    </style>
+
+    <style name="baseEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/medium_grey</item>
+    </style>
+
+    <style name="settingsEditText" parent="baseEditText">
+        <item name="android:layout_height">@dimen/new_settings_row_height</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_marginLeft">@dimen/settings_text_left_margin</item>
+    </style>
+
+    <style name="mscSpinnerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="homeThingContainer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="homeThingIcon">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="homeThingLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:lines">2</item>
+        <item name="fontPath">fonts/trebuc.ttf</item>
+    </style>
+
+    <style name="settings_checkbox_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/new_settings_row_height</item>
+        <item name="android:background">@drawable/listview_item_selector</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">@dimen/settings_side_padding</item>
+        <item name="android:paddingRight">@dimen/settings_side_padding</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="settings_section_header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:paddingLeft">35dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/new_settings_header_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/medium_grey</item>
+    </style>
+
+    <style name="settings_segmented_control">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginLeft">@dimen/settings_side_padding</item>
+        <item name="android:layout_marginRight">@dimen/settings_side_padding</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="settings_segmented_control_vertical">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">35dp</item>
+        <item name="android:layout_marginLeft">@dimen/settings_side_padding</item>
+        <item name="android:layout_marginRight">@dimen/settings_side_padding</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="top_bottom_bordered_edit_field">
+        <item name="android:background">@drawable/edit_text_transparent_background</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textColor">@color/medium_grey</item>
+        <item name="android:textColorHint">@color/medium_grey</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+
+    <style name="setting_type">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edit_field">
+        <item name="android:background">@drawable/text_field_states</item>
+        <item name="android:padding">13dp</item>
+        <item name="android:textColor">@color/medium_grey</item>
+        <item name="android:textColorHint">@color/medium_grey</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="button_led_card" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardBackgroundColor">@color/msc_accent</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">1dp</item>
+    </style>
+
+</resources>

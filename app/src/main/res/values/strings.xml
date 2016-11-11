@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">GasDetection</string>
+
+    <!--LOGIN-->
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create accout</string>
+    <string name="Version">Version</string>
+    <string name="network_connection_title">Network Connection</string>
+    <string name="network_connection_body">Check your settings and connect to WiFi, 3G or 4G.</string>
+
+    <!--REGISTER-->
+    <string name="register">Register</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="next">Next</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="err_null_email">Email or  password is null</string>
+    <string name="err_password_fail">Passwords do not match</string>
+    <string name="err_null_name">Name is null</string>
+
+    <!--HOME-->
+    <string name="home_add_icon_label">Add</string>
+
+
+    <!--Drawer Layout-->
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="global_settings_title">Global Settings</string>
+    <string name="devices_settings_title">Devices</string>
+    <string name="users_title">Users</string>
+
+
+    <!--Seting-->
+    <string name="type_setting">Type Setting</string>
+    <string name="custom">Custom</string>
+    <string name="power_switch">Switch</string>
+    <string name="sample_light">Light</string>
+    <string name="weather_station">Weather</string>
+    <string name="gps_tracker">GPS</string>
+    <string name="led_bar">LED</string>
+    <string name="all">All</string>
+
+    <array name="type">
+        <item>Custom</item>
+        <item>Switch</item>
+        <item>Light</item>
+        <item>Weather</item>
+        <item>GPS</item>
+        <item>LED</item>
+        <item>All</item>
+    </array>
+
+    <!--USER-->
+    <string name="old_password_hint">Old Password</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="confirm_new_password_hint">Confirm New Password</string>
+    <string name="submit">Submit</string>
+    <string name="err_passord"></string>
+
+
+    <!--Device List-->
+    <string name="dev_list">DeviceList</string>
+    <string name="dev_name">Device Name</string>
+    <string name="dev_type">Device Type</string>
+    <string name="group_name">Group Name</string>
+
+
+    <!--Create Device-->
+    <string name="create_device_title">Create Device</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="err_null_name_or_group_name">Device name or Group name is null</string>
+
+    <array name="device_type">
+        <item>Custom</item>
+        <item>Switch</item>
+        <item>Light</item>
+        <item>Weather</item>
+        <item>GPS</item>
+        <item>LED</item>
+    </array>
+
+    <!--SelectMode-->
+    <string name="select_mode_title">Select Mode</string>
+    <string name="back">Back</string>
+
+    <!--Select scan-->
+    <string name="select_scan_title">Select Add Mode</string>
+    <string name="setup_qr_info_explanation">Scan the QR code on your device</string>
+    <string name="setup_qr_info_button">Scan and add</string>
+    <string name="setup_qr_info_back_button">Add</string>
+
+
+    <!--capture-->
+    <string name="capture_title">Scan QR Code</string>
+    <string name="qr_scanner_desc">Scan the QR code on your device</string>
+    <string name="err_scanner">Scan failed</string>
+
+
+    <!--Add Device-->
+    <string name="add_device_title">Add Device</string>
+    <string name="dev_id">Device ID</string>
+    <string name="dev_key">API Key</string>
+
+
+    <!--Base device Setting-->
+    <string name="setting_label">Setting</string>
+
+    <!--led-->
+    <string name="led_title">Led</string>
+    <string name="led_setting_title">Led Setting</string>
+    <string name="water_led">flowing water lights</string>
+    <string name="breathing_led">BLN control</string>
+    <string name="blink_led">Blink</string>
+    <string name="custom_led">Custom</string>
+    <string name="water_test">Flowing water light effects demo</string>
+    <string name="breathing_test">BLN control effect demo</string>
+    <string name="blink_test">Led flashing effects demo</string>
+    <string name="custom_test">Custom effects demo</string>
+    <!--Fragment led setting-->
+    <string name="led_time">Time:</string>
+    <string name="total_number">Total:</string>
+    <string name="led_count_hint">The total number of leds</string>
+
+    <string name="led_start_num_hint">Start position of leds(Must be less than 255)</string>
+    <string name="led_end_num_hint">End position of leds(Must be less than 255)</string>
+    <string name="led_start_num">Start:</string>
+    <string name="led_end_num">End:</string>
+
+    <string name="led_color">Color:</string>
+</resources>
