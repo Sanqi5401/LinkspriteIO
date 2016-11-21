@@ -46,7 +46,7 @@
             android:id="@+id/password"
             style="@style/settingsEditText"
             android:hint="@string/password_hint"
-            android:inputType="textCapWords" />
+            android:inputType="textPassword" />
 
 
         <View

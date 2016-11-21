@@ -16,7 +16,7 @@ android {
     aaptOptions.useNewCruncher = false
 
     defaultConfig {
-        applicationId "com.linksprite.gasdetection"
+        applicationId "com.linksprite.io"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 2
