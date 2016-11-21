@@ -27,7 +27,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by Administrator on 2016/8/5.
  */
-public class RegisterActivity extends BaseActivity {
+public class RegisterActivity extends SetupActivity {
 
 
     @InjectView(R.id.confirmPassword)
@@ -91,7 +91,7 @@ public class RegisterActivity extends BaseActivity {
 
             if (dialog != null)
                 dialog.dismiss();
-            showErrDialog(getString(R.string.err_null_email));
+            showErrMessage(getString(R.string.err_null_email));
             return;
         }
 
@@ -100,7 +100,7 @@ public class RegisterActivity extends BaseActivity {
         } else {
             if (dialog != null)
                 dialog.dismiss();
-            showErrDialog(getString(R.string.err_password_fail));
+            showErrMessage(getString(R.string.err_password_fail));
         }
     }
 
@@ -115,7 +115,7 @@ public class RegisterActivity extends BaseActivity {
                         if (is) {
                             if (dialog != null)
                                 dialog.dismiss();
-                            showErrDialog(loginResponse.getError());
+                            showErrMessage(loginResponse.getError());
                         }
                         return !is;
                     }
@@ -131,7 +131,7 @@ public class RegisterActivity extends BaseActivity {
                     public void onError(Throwable e) {
                         if (dialog != null)
                             dialog.dismiss();
-                        showErrDialog(e.getMessage());
+                        showErrMessage(e.getMessage());
                     }
 
                     @Override
