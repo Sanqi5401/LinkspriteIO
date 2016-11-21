@@ -23,6 +23,7 @@ import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
 import retrofit.http.Body;
+import retrofit.http.DELETE;
 import retrofit.http.GET;
 import retrofit.http.Header;
 import retrofit.http.Headers;
@@ -94,6 +95,11 @@ public class ApiManager {
                 @Path("id") String id);
         @GET(Constant.DEV + "/{id}")
         Observable<BaseDevRespone<LEDResponse>> getLedInfo(
+                @Header("Authorization") String jwt,
+                @Path("id") String id);
+
+        @DELETE(Constant.DEV + "/{id}")
+        Observable<BaseDevRespone> deleteDevice(
                 @Header("Authorization") String jwt,
                 @Path("id") String id);
 

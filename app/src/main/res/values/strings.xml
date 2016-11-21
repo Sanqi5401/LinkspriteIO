@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">GasDetection</string>
+    <string name="app_name">LinkspriteIO</string>
+
+
+    <!--All-->
+    <string name="delete">Delete</string>
 
     <!--LOGIN-->
     <string name="email_hint">Email</string>
@@ -22,6 +26,7 @@
 
     <!--HOME-->
     <string name="home_add_icon_label">Add</string>
+    <string name="home_default">This feature is not yet implemented</string>
 
 
     <!--Drawer Layout-->
@@ -110,6 +115,7 @@
 
     <!--led-->
     <string name="led_title">Led</string>
+
     <string name="led_setting_title">Led Setting</string>
     <string name="water_led">flowing water lights</string>
     <string name="breathing_led">BLN control</string>

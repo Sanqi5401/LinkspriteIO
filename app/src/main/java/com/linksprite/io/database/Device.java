@@ -279,6 +279,7 @@ public class Device {
         open();
         int deleted = database.delete(MySnapDbOpenHelper.TABLE_DEVICE, Device.ID + "=?", new String[]{getId().toString()});
         close();
+
         return deleted;
     }
 

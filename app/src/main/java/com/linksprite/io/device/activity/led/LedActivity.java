@@ -3,14 +3,19 @@ package com.linksprite.io.device.activity.led;
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.linksprite.io.R;
+import com.linksprite.io.activity.HomeActivity;
+import com.linksprite.io.activity.SelectModeActivity;
 import com.linksprite.io.activity.SetupActivity;
 import com.linksprite.io.database.Device;
 import com.linksprite.io.network.ApiManager;
@@ -200,7 +205,7 @@ public class LedActivity extends SetupActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                if (isDestroyed()) {
+                if (!isDestroyed()) {
                     if (loading != null) {
                         loading.changeAlertType(SweetAlertDialog.PROGRESS_TYPE);
                     } else {
@@ -248,5 +253,51 @@ public class LedActivity extends SetupActivity {
     public void errDialogClick() {
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.delete, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.delete:
+                deleteDevice();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void deleteDevice() {
+        showLoadingDialog();
+        ApiManager.getDevInfoService().deleteDevice(account.getJwt(), device.getDeviceid())
+                .observeOn(Schedulers.newThread())
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<BaseDevRespone>() {
+                    @Override
+                    public void onCompleted() {
+                        if (loading != null)
+                            loading.dismiss();
+                        device.removeDevice();
+                        Device.LoadDeviceList(LedActivity.this);
+                        Intent intent = new Intent(LedActivity.this, HomeActivity.class);
+                        nextActivity(intent);
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        if (loading != null)
+                            loading.dismiss();
+                        showErrMessage(e.getMessage());
+                    }
+
+                    @Override
+                    public void onNext(BaseDevRespone baseDevRespone) {
+
+                    }
+                });
+    }
 
 }

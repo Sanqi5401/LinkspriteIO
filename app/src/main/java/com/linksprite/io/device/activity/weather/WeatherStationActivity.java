@@ -17,6 +17,5 @@ public class WeatherStationActivity extends SetupActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_station);
         ButterKnife.inject(this);
-
     }
 }

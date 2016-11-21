@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.linksprite.io.Globals;
 import com.linksprite.io.R;
@@ -162,15 +163,13 @@ public class HomeActivity extends BaseActivity implements HomeAdapter.OnDeviceIt
     public void onClick(View v, Device device) {
         Intent intent;
         switch (device.getType()) {
-            case AppSetting.TYPE_WEATHER_STATION:
-                intent = new Intent(HomeActivity.this, WeatherStationActivity.class);
-                break;
             case AppSetting.TYPE_LED_BAR:
                 intent = new Intent(HomeActivity.this, LedActivity.class);
                 break;
             default:
-                intent = new Intent();
-                break;
+                // TODO: Add other device setting
+                Toast.makeText(HomeActivity.this,getString(R.string.home_default),Toast.LENGTH_SHORT).show();
+                return;
         }
         intent.putExtra("deviceID", device.getDeviceid());
         nextActivity(intent);
