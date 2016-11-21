@@ -1,40 +1,40 @@
-# �ƴ�
+# 灯带
 
 [TOC]
 
-## 1.android app��ʹ��
+## 1.android app的使用
 
-### 1.1 ��װapk
+### 1.1 安装apk
 
--  ����app [LinkspriteIo.apk](https://github.com/Sanqi5401/LinkspriteIO/raw/master/app/LinkspriteIo.apk),����װ
+-  下载app [LinkspriteIo.apk](https://github.com/Sanqi5401/LinkspriteIO/raw/master/apk/linkspriteio_v1.0.2.apk),并安装
 
 
 
-### 1.2 �û��Ĵ������¼
+### 1.2 用户的创建或登录
 
-- �����¼����
+- 进入登录界面
 
 ![](images/login.png)
 
-- ��û���˻���ע��
+- 若没有账户请注册
 
 ![](images/register.png)
 
-### 1.3 �����豸
+### 1.3 创建设备
 
-- ���ڳ��ε�¼û���豸����+�����豸
+- 由于初次登录没有设备请点击+添加设备
 
 ![](images/home.png)
 
-- ����ѡ��ƴ��������豸�Ĺ��ܺ�����������
+- 这里选择灯带，其他设备的功能后续会逐渐添加
 
 ![](images/select.png)
 
-- ѡ���Ǵ����豸�������ӹٷ��豸������ѡ�񴴽��豸
+- 选择是创建设备还是添加官方设备，这里选择创建设备
 
 ![](images/selectMode.png)
 
-- ��д�豸���������������confirm��ť�����豸
+- 填写设备名和组名，并点击confirm按钮创建设备
 
 ![](images/createDevice.png)
 
@@ -42,54 +42,54 @@
 
 
 
-### 1.4 ���Ƶƴ�
+### 1.4 控制灯带
 
-- ����Ѿ��������������豸��������Ҫ���Ƶ��豸
+- 如果已经创建或添加了设备，请点击需要控制的设备
 
   ![](images/led.png)
 
-- ѡ����Ҫ�ƴ���ʾ��Ч��.���У�
+- 选择需要灯带显示的效果.其中：
 
-  Flowing water lights:��ˮ��Ч��
+  Flowing water lights:流水灯效果
 
-  Bln control:������Ч��
+  Bln control:呼吸灯效果
 
-  Blink:��˸Ч��
+  Blink:闪烁效果
 
-  Custom:�Զ���Ч��
+  Custom:自定义效果
 
   ![](images/ledshow.png)
 
-- ������ˮ��Ч����
+- 设置流水灯效果。
 
-  ���õƴ����ܸ���:Total
+  设置灯带的总个数:Total
 
-  ������ˮ�Ƶ�ʱ��:Time 
+  设置流水灯的时间:Time 
 
   ![](images/water.png)
 
-- ���ú�����Ч��
+- 设置呼吸灯效果
 
-  ���õƴ����ܸ���: Total
+  设置灯带的总个数: Total
 
   ![](images/bln.png)
 
-- ������˸Ч��
+- 设置闪烁效果
 
-  ���õƴ����ܸ���:Total
+  设置灯带的总个数:Total
 
-  ������˸��ʱ��:Time
+  设置闪烁的时长:Time
 
   ![](images/blink.png)
 
-- �����Զ���Ч��
+- 设置自定义效果
 
-  ���õƴ����ܸ���:Total
+  设置灯带的总个数:Total
 
-  �����Զ���Ч������ʼ(���ڶ��ٸ��ƿ�ʼ��):Start
+  设置自定义效果的起始(即第多少个灯开始亮):Start
 
-  �����Զ���Ч���Ľ���(���ڶ��ٸ��ƿ�ʼ��):End
+  设置自定义效果的结束(即第多少个灯开始灭):End
 
-  �����Զ���Ч������ɫ:Color (һ��������ɫ��Red,Blue,Green,White)
+  设置自定义效果的颜色:Color (一共四种颜色：Red,Blue,Green,White)
 
   ![](images/custem.png)
