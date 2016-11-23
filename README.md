@@ -1,40 +1,42 @@
-# 灯带
+# LED Strip
 
 [TOC]
 
-## 1.android app的使用
+## 1.Android Application
 
-### 1.1 安装apk
+### 1.1 Install Apk
 
--  下载app [LinkspriteIo.apk](https://github.com/Sanqi5401/LinkspriteIO/raw/master/apk/linkspriteio_v1.0.2.apk),并安装
+-  Download  [LinkspriteIo.apk](https://github.com/Sanqi5401/LinkspriteIO/raw/master/apk/linkspriteio_v1.0.2.apk) , And Install.
 
 
 
-### 1.2 用户的创建或登录
+### 1.2 Register Or Login
 
-- 进入登录界面
+- Enter to the login page
 
 ![](images/login.png)
 
-- 若没有账户请注册
+- If not register,Please register
 
 ![](images/register.png)
 
-### 1.3 创建设备
+### 1.3 Create Device
 
-- 由于初次登录没有设备请点击+添加设备
+- If not have device,Please click + icon to add device
 
 ![](images/home.png)
 
-- 这里选择灯带，其他设备的功能后续会逐渐添加
+- Please choose LED button  and  other device type will be added later.
 
 ![](images/select.png)
 
-- 选择是创建设备还是添加官方设备，这里选择创建设备
+- Please choose ADD button to create a device
 
 ![](images/selectMode.png)
 
-- 填写设备名和组名，并点击confirm按钮创建设备
+- 
+  Fill in the name of the device and group name, and click the confirm button to create the device
+
 
 ![](images/createDevice.png)
 
@@ -42,54 +44,69 @@
 
 
 
-### 1.4 控制灯带
+### 1.4 LED Strip Control
 
-- 如果已经创建或添加了设备，请点击需要控制的设备
+- Please choose the device button to set device
 
   ![](images/led.png)
 
-- 选择需要灯带显示的效果.其中：
+- LED strip how to show：
 
-  Flowing water lights:流水灯效果
-
-  Bln control:呼吸灯效果
-
-  Blink:闪烁效果
-
-  Custom:自定义效果
+  > 1.Flowing water lights
+  >
+  > 2.Bln control
+  >
+  > 3.Blink
+  >
+  > 4.Custom
+  >
 
   ![](images/ledshow.png)
 
-- 设置流水灯效果。
+- Set the flowing water lights
 
-  设置灯带的总个数:Total
+  > Set the total number of LED strip:Total
+  >
 
-  设置流水灯的时间:Time 
+
+  > Set the time of flowing water lights:Time 
+  >
 
   ![](images/water.png)
 
-- 设置呼吸灯效果
+- Set bln control
 
-  设置灯带的总个数: Total
+  > Set the total number of LED strip:Total
+  >
 
   ![](images/bln.png)
 
-- 设置闪烁效果
+- Set blink
 
-  设置灯带的总个数:Total
+  > Set the total number of LED strip:Total
+  >
 
-  设置闪烁的时长:Time
+
+  > Set the time of blink:Time
+  >
 
   ![](images/blink.png)
 
-- 设置自定义效果
+- Set custom
 
-  设置灯带的总个数:Total
+  > Set the total number of LED strip:Total
+  >
 
-  设置自定义效果的起始(即第多少个灯开始亮):Start
 
-  设置自定义效果的结束(即第多少个灯开始灭):End
+  > Set the start number which :Start
+  >
 
-  设置自定义效果的颜色:Color (一共四种颜色：Red,Blue,Green,White)
+
+  > Set the end number:End
+  >
+
+
+  > Set the color of LED:Color (Four color：***Red,Blue,Green,White***)
+  >
 
   ![](images/custem.png)
