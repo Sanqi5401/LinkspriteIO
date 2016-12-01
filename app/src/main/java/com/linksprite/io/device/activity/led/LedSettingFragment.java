@@ -72,13 +72,13 @@ public class LedSettingFragment extends DialogFragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ledColorSelect.setAdapter(adapter);
 
-        timeSeekbar.setMin(50);
-        timeSeekbar.setMax(5000);
+        timeSeekbar.setMin(20);
+        timeSeekbar.setMax(500);
 
         timeSeekbar.setOnProgressChangeListener(new DiscreteSeekBar.OnProgressChangeListener() {
             @Override
             public void onProgressChanged(DiscreteSeekBar seekBar, int value, boolean fromUser) {
-                breathingTime.setText("" + seekBar.getProgress());
+                breathingTime.setText("" + seekBar.getProgress()+"ms");
             }
 
             @Override
@@ -124,7 +124,7 @@ public class LedSettingFragment extends DialogFragment {
                     } else {
                         ledColorSelect.setSelection(Integer.parseInt(LedActivity.led.getColor()), true);
                     }
-                    if (TextUtils.isEmpty(LedActivity.led.getTime())) {
+                    if (TextUtils.isEmpty(LedActivity.led.getNum())) {
                         edtNumberStart.setText("01");
                         edtNumberEnd.setText("10");
                     } else {

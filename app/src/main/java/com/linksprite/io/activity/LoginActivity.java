@@ -191,17 +191,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void addUser(LoginResponse loginResponse) {
+
+        ContentValues values = new ContentValues();
+        values.put(Account._ID, loginResponse.getUser().get_id());
+        values.put(Account.APIKEY, loginResponse.getUser().getApikey());
+        values.put(Account.JWT, "Bearer " + loginResponse.getJwt());
+        values.put(Account.CREATEAT, loginResponse.getUser().getCreatedAt());
+        values.put(Account.EMAIL, loginResponse.getUser().getEmail());
+        values.put(Account.IAT, loginResponse.getUser().getIat());
         if (Globals._appSettings.getAutoLoginRemote()) {
-            ContentValues values = new ContentValues();
-            values.put(Account._ID, loginResponse.getUser().get_id());
-            values.put(Account.APIKEY, loginResponse.getUser().getApikey());
-            values.put(Account.JWT, "Bearer " + loginResponse.getJwt());
-            values.put(Account.CREATEAT, loginResponse.getUser().getCreatedAt());
-            values.put(Account.EMAIL, loginResponse.getUser().getEmail());
-            values.put(Account.IAT, loginResponse.getUser().getIat());
             values.put(Account.USERPASSWORD, password);
-            account = new Account(LoginActivity.this, values);
         }
+        account = new Account(LoginActivity.this, values);
+
 
     }
 
