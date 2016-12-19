@@ -15,13 +15,13 @@ import android.widget.TextView;
 
 import com.linksprite.io.R;
 import com.linksprite.io.activity.HomeActivity;
-import com.linksprite.io.activity.SelectModeActivity;
 import com.linksprite.io.activity.SetupActivity;
 import com.linksprite.io.database.Device;
+import com.linksprite.io.device.fragment.LedSettingFragment;
+import com.linksprite.io.device.mode.LEDResponse;
 import com.linksprite.io.network.ApiManager;
 import com.linksprite.io.network.model.BaseDevRespone;
 import com.linksprite.io.network.model.BaseUpdateRequest;
-import com.linksprite.io.network.model.LedUpdateRequest;
 import com.linksprite.io.network.model.UpdateRespone;
 
 import java.util.Timer;
@@ -33,7 +33,6 @@ import butterknife.OnClick;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 

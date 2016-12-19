@@ -26,4 +26,10 @@ public class Constant {
     public final static int HUM_TYPE = 0X2;
     public final static int PRESSURE_TYPE = 0X3;
 
+
+    public final static int TYPE_CUSTOM_FLOWER = 0X01;
+
+
+
+
 }

@@ -1,4 +1,4 @@
-package com.linksprite.io.device.activity.led;
+package com.linksprite.io.device.mode;
 
 import com.google.gson.annotations.Expose;
 

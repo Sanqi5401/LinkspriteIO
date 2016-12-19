@@ -136,4 +136,16 @@
     <string name="led_end_num">End:</string>
 
     <string name="led_color">Color:</string>
+
+    <!--Custom-->
+    <string name="custom_title">Custom</string>
+
+    <!--Flower-->
+    <string name="hum_title">Humidity:</string>
+    <string name="tem_title">Temperature:</string>
+    <string name="light_title">Light(%):</string>
+    <string name="soil_title">Soil_Mois:</string>
+    <string name="water">Water:</string>
+    <string name="dry">Dry</string>
+    <string name="drippy">Drippy</string>
 </resources>

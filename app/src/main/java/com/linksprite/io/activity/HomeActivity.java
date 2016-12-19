@@ -166,7 +166,11 @@ public class HomeActivity extends BaseActivity implements HomeAdapter.OnDeviceIt
             case AppSetting.TYPE_LED_BAR:
                 intent = new Intent(HomeActivity.this, LedActivity.class);
                 break;
+            case AppSetting.TYPE_COSTOM_DEVICE_TYPE:
+                intent = new Intent(HomeActivity.this, CustomActivity.class);
+                break;
             default:
+
                 // TODO: Add other device setting
                 Toast.makeText(HomeActivity.this,getString(R.string.home_default),Toast.LENGTH_SHORT).show();
                 return;
@@ -192,5 +196,7 @@ public class HomeActivity extends BaseActivity implements HomeAdapter.OnDeviceIt
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }

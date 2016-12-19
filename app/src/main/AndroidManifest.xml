@@ -34,6 +34,7 @@
         <activity android:name=".activity.CaptureActivity" />
         <activity android:name=".activity.AddDeviceActivity" />
         <activity android:name=".device.activity.led.LedActivity"/>
+        <activity android:name=".activity.CustomActivity"/>
     </application>
 
 </manifest>

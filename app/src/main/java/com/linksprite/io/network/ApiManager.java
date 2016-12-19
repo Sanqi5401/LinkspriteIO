@@ -1,14 +1,15 @@
 package com.linksprite.io.network;
 
-import com.linksprite.io.activity.AddDeviceActivity;
-import com.linksprite.io.device.activity.led.LEDResponse;
+import com.linksprite.io.device.mode.CustomResponse;
+import com.linksprite.io.device.mode.FlowResponse;
+import com.linksprite.io.device.mode.LEDResponse;
+import com.linksprite.io.device.mode.UpdateFlower;
 import com.linksprite.io.network.model.AddDeviceRequest;
 import com.linksprite.io.network.model.CreateDevRequest;
 import com.linksprite.io.network.model.BaseDevRespone;
 import com.linksprite.io.network.model.BaseRespone;
 import com.linksprite.io.network.model.BaseUpdateRequest;
 import com.linksprite.io.network.model.DevListRespone;
-import com.linksprite.io.network.model.LedUpdateRequest;
 import com.linksprite.io.network.model.LoginRequest;
 import com.linksprite.io.network.model.LoginResponse;
 import com.linksprite.io.network.model.ResetPasswordRequest;
@@ -103,12 +104,24 @@ public class ApiManager {
                 @Header("Authorization") String jwt,
                 @Path("id") String id);
 
+        @GET(Constant.DEV + "/{id}")
+        Observable<BaseDevRespone<CustomResponse>> getCustomInfo(
+                        @Header("Authorization") String jwt,
+                        @Path("id") String id);
+        @GET(Constant.DEV + "/{id}")
+        Observable<BaseDevRespone<FlowResponse>> getFlowerInfo(
+                @Header("Authorization") String jwt,
+                @Path("id") String id);
     }
 
-    public interface LedUpdateService {
+    public interface UpdateService {
         @Headers({"Content-Type: application/json"})
         @POST(Constant.UPDATE)
         Observable<UpdateRespone> updateLed(@Body BaseUpdateRequest<LEDResponse> request);
+
+        @Headers({"Content-Type: application/json"})
+        @POST(Constant.UPDATE)
+        Observable<UpdateRespone> updateFlower(@Body BaseUpdateRequest<UpdateFlower> request);
     }
 
     private static LoginService LOGIN = builder.create(LoginService.class);
@@ -119,7 +132,7 @@ public class ApiManager {
     private static CreateDevService CREATEDEIVCE = builder.create(CreateDevService.class);
     private static AddDeviceService ADDDEVICE = builder.create(AddDeviceService.class);
 
-    private static LedUpdateService UPDATE = builder.create(LedUpdateService.class);
+    private static UpdateService UPDATE = builder.create(UpdateService.class);
 
     public static LoginService getLoginService() {
         return LOGIN;
@@ -149,7 +162,7 @@ public class ApiManager {
         return ADDDEVICE;
     }
 
-    public static LedUpdateService getDevUpdateService() {
+    public static UpdateService getDevUpdateService() {
         return UPDATE;
     }
 }

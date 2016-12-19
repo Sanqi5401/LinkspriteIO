@@ -1,4 +1,4 @@
-package com.linksprite.io.device.activity.led;
+package com.linksprite.io.device.fragment;
 
 import android.app.DialogFragment;
 import android.graphics.Color;
@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.linksprite.io.R;
+import com.linksprite.io.device.activity.led.LedActivity;
 import com.linksprite.io.network.model.LedUpdateRequest;
 
 import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
