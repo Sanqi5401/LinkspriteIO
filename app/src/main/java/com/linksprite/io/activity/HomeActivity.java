@@ -162,17 +162,18 @@ public class HomeActivity extends BaseActivity implements HomeAdapter.OnDeviceIt
     @Override
     public void onClick(View v, Device device) {
         Intent intent;
-        switch (device.getType()) {
+        int type = device.getType();
+        switch (type) {
             case AppSetting.TYPE_LED_BAR:
                 intent = new Intent(HomeActivity.this, LedActivity.class);
                 break;
             case AppSetting.TYPE_COSTOM_DEVICE_TYPE:
+                Log.e("Tag", "data is  = " + device.getType());
                 intent = new Intent(HomeActivity.this, CustomActivity.class);
                 break;
             default:
-
                 // TODO: Add other device setting
-                Toast.makeText(HomeActivity.this,getString(R.string.home_default),Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, getString(R.string.home_default), Toast.LENGTH_SHORT).show();
                 return;
         }
         intent.putExtra("deviceID", device.getDeviceid());
@@ -196,7 +197,6 @@ public class HomeActivity extends BaseActivity implements HomeAdapter.OnDeviceIt
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

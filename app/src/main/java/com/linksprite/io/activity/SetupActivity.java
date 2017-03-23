@@ -43,7 +43,7 @@ public class SetupActivity extends AppCompatActivity {
         if (mscToolbar != null) {
             setSupportActionBar(mscToolbar);
             getSupportActionBar().setTitle(titleString);
-            mscToolbar.setNavigationIcon(android.support.design.R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+            mscToolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
             mscToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

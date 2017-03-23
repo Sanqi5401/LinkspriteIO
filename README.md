@@ -109,4 +109,12 @@
   > Set the color of LED:Color (Four color：***Red,Blue,Green,White***)
   >
 
-  ![](images/custem.png)
+ ![](images/custem.png)
+
+
+
+### 1.5 Water Flower
+
+-   Device Type:00(Custom device Type)
+-   JSON : {  "light": "0",  "humidity": "50",  "water": "1",  "type": "1",  "Soil_Mois": "Dry",  "temperature": "16",...}
+- The page is ![](images/flower.png)
