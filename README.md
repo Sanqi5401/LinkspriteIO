@@ -117,4 +117,5 @@
 
 -   Device Type:00(Custom device Type)
 -   JSON : {  "light": "0",  "humidity": "50",  "water": "1",  "type": "1",  "Soil_Mois": "Dry",  "temperature": "16",...}
-- The page is ![](images/flower.png)
+- The page is
+![](images/flower.jpg)
